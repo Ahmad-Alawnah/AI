@@ -16,7 +16,12 @@ public class Letter implements Comparable<Letter>{
     }
 
     public Letter(int[][] c){
-        chromosome = c;
+        this.chromosome = new int[5][5];
+        for(int i =0;i<c.length;i++){
+            for(int j =0;j<c[i].length;j++){
+                this.chromosome[i][j] = c[i][j];
+            }
+        }
         calculateFitness();
     }
 
